@@ -1,0 +1,150 @@
+/* Universal styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+/* Dark mode styles */
+[data-dark-mode="true"] {
+  color: white !important;
+  background: #171717 !important;
+}
+
+/* Toggle theme button */
+#toggle-theme {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  aspect-ratio: 1;
+  border: 1.5px solid black;
+  border-radius: 100vw;
+  overflow: hidden;
+}
+
+/* Icons inside toggle theme button */
+#toggle-theme i {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  transition: .3s linear;
+}
+
+/* Theme icon state transition */
+.theme-icon-state {
+  transform: translateY(200%) !important;
+}
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+  background: #171717 !important;
+  color: #fff !important;
+}
+
+/* General icon styles */
+i {
+  display: block;
+}
+
+/* Button styles */
+button {
+  cursor: pointer;
+  display: block;
+  outline: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* Body styles */
+body {
+  font-family: system-ui;
+  height: 100svh;
+  overflow-x: hidden;
+}
+
+/* Aside (sidebar) styles */
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: .875rem;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  transition: .3s linear;
+}
+
+/* Sidebar header */
+.side-header {
+  display: flex;
+  align-items: center;
+  padding-block: 1rem;
+  border-bottom: 1.125px solid #eee;
+}
+
+aside h1 {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/* Button icon inside sidebar */
+.btn-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  aspect-ratio: 1;
+  color: inherit;
+  font-size: 1.125rem;
+  transition: .3s linear;
+}
+
+/* Unordered list styles */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 85svh;
+}
+
+/* List item styles */
+li {
+  display: flex;
+  align-items: center;
+  margin-block: 1rem;
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+li:hover:not(.user-status) > * {
+  color: #5095FF;
+}
+
+/* List title styles */
+.list-title {
+  font-weight: 600;
+}
+
+/* Text styles */
+.text {
+  max-width: 0;
+  transition: .3s linear;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+/* Show text class */
+.show-text {
+  max-width: 200px !important;
+}
+
+/* User status styles */
+.user-status {
+  margin-top: auto;
+  border: 2px solid black;
+  border-radius: .25rem;
+}
